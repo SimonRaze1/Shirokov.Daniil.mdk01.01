@@ -19,7 +19,7 @@ namespace ChainOfResponsibility.Validators
         {
             if (String.IsNullOrEmpty(user.Password) || user.Password.Length < 8)
             {
-                Console.WriteLine("пароль не соответствует требуемой длине");
+                Console.WriteLine("пароль не соответствует требуемой длине/");
                 return false;
             }
             return _nextValidator?.Validate(user) ?? true;
